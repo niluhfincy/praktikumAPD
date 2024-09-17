@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowchart"/>
+        <attribute name="authors" value="ACER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-09 02:24:14 PM"/>
+        <attribute name="created" value="QUNFUjtMQVBUT1AtMTFONVYzSzQ7MjAyNC0wOS0wOTswOTozMTo1NyBBTTsyNTY1"/>
+        <attribute name="edited" value="QUNFUjtMQVBUT1AtMTFONVYzSzQ7MjAyNC0wOS0wOTswMjoyNDoxNCBQTTs0OzI2Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="JumlahPengunjung, hargaPembeli, hargaPembeli1, hargaPembeli2, hargaPembeli3, hargaTiket" type="Integer" array="False" size=""/>
+            <declare name="umurPembeli, UmurPembeli1, UmurPembeli2, UmurPembeli3, Diskon, TotalHarga" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan jumlah pengunjung&quot;" newline="True"/>
+            <input variable="JumlahPengunjung"/>
+            <assign variable="hargaTiket" expression="60000"/>
+            <if expression="JumlahPengunjung&lt;3">
+                <then>
+                    <output expression="&quot;Tidak mendapat diskon&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Masukkan umur pembeli 1.&quot;" newline="True"/>
+                    <input variable="UmurPembeli1"/>
+                    <output expression="&quot;Masukkan umur pembeli 2.&quot;" newline="True"/>
+                    <input variable="UmurPembeli2"/>
+                    <output expression="&quot;Masukkan umur pembeli 3.&quot;" newline="True"/>
+                    <input variable="UmurPembeli3"/>
+                    <if expression="UmurPembeli1 = UmurPembeli2 or UmurPembeli1 = UmurPembeli3 or UmurPembeli2 = UmurPembeli3 or Umurpembeli2 &gt; Umurpembeli3">
+                        <then>
+                            <output expression="&quot;TIDAK MENDAPAT DISKON&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="UmurPembeli1 &lt;= 18">
+                                <then>
+                                    <output expression="&quot;maka diskon = 20%&quot;" newline="True"/>
+                                    <assign variable="hargaPembeli1" expression="hargaTiket - (hargaTiket * 0.2)"/>
+                                    <output expression="hargaPembeli1" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="umurPembeli1 &gt; 18 and umurPembeli2 &lt; 25">
+                                        <then>
+                                            <output expression="&quot;maka diskon = 15%&quot;" newline="True"/>
+                                            <assign variable="hargaPembeli1" expression="hargaTiket - (hargaTiket * 0.15)"/>
+                                            <output expression="hargaPembeli1" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Maka diskon 10%&quot;" newline="True"/>
+                                            <assign variable="hargaPembeli1" expression="hargaTiket - (hargaTiket * 0.10)"/>
+                                            <output expression="hargaPembeli1" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <if expression="UmurPembeli2 &lt;= 18">
+                                <then>
+                                    <output expression="&quot;maka diskon = 20%&quot;" newline="True"/>
+                                    <assign variable="hargaPembeli2" expression="hargaTiket - (hargaTiket * 0.2)"/>
+                                    <output expression="hargaPembeli2" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="umurPembeli2 &gt; 18 and umurPembeli2 &lt; 25">
+                                        <then>
+                                            <output expression="&quot;maka diskon = 15%&quot;" newline="True"/>
+                                            <assign variable="hargaPembeli2" expression="hargaTiket - (hargaTiket * 0.15)"/>
+                                            <output expression="hargaPembeli2" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Maka diskon 10%&quot;" newline="True"/>
+                                            <assign variable="hargaPembeli2" expression="hargaTiket - (hargaTiket * 0.10)"/>
+                                            <output expression="hargaPembeli2" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <if expression="UmurPembeli3 &gt; 18">
+                                <then>
+                                    <output expression="&quot;maka diskon = 20%&quot;" newline="True"/>
+                                    <assign variable="hargaPembeli3" expression="hargaTiket - (hargaTiket * 0.2)"/>
+                                    <output expression="hargaPembeli3" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="umurPembeli3 &gt; 18 and umurPembeli3 &lt; 25">
+                                        <then>
+                                            <output expression="&quot;maka diskon = 15%&quot;" newline="True"/>
+                                            <assign variable="hargaPembeli3" expression="hargaTiket - (hargaTiket * 0.15)"/>
+                                            <output expression="hargaPembeli3" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Maka diskon 10%&quot;" newline="True"/>
+                                            <assign variable="hargaPembeli3" expression="hargaTiket - (hargaTiket * 0.10)"/>
+                                            <output expression="hargaPembeli3" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <assign variable="TotalHarga" expression="hargaPembeli1 + hargaPembeli2 + hargaPembeli3"/>
+                            <output expression="TotalHarga" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

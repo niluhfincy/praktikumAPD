@@ -1,0 +1,26 @@
+NamaLengkap = input("Masukkan Nama Lengkap: ")
+print(NamaLengkap)
+NamaPanggilan = input("Masukkan Nama Panggilan: ")
+print(NamaPanggilan)
+Nim = input("Masukkan NIM: ")
+print(Nim)
+ProgramStudi= input("Masukkan Program Studi: ")
+print(ProgramStudi)
+TahunAjaran = int(input("Masukkan Tahun Ajaran Masuk: "))
+print(TahunAjaran)
+Umur = int(input("Masukkan Umur anda: "))
+print(Umur)
+TinggiBadan = float(input("Masukkan Tinggi Badan anda: "))
+print(TinggiBadan)
+Agama = input("Masukkan Agama anda: ")
+print(Agama)
+AsalSekolah = input("Masukkan Asal Sekolah Anda: ")
+print(AsalSekolah)
+
+NimTerakhir = int(Nim[8:10])
+modulusNim = NimTerakhir % 6 
+
+
+print("Nama saya adalah " + NamaLengkap + ", biasa dipanggil " + NamaPanggilan + ", Dengan NIM " + Nim )
+print(", saya dari program studi " + ProgramStudi + ", Saya dari angkatan " + str(TahunAjaran) + ", Sekarang saya berumur " + str(Umur) + " tahun")
+print(", Tinggi Badan Saya adalah " + str(TinggiBadan) + ", Agama saya adalah " + Agama + ", Asal sekolah saya dari " + AsalSekolah + ". " + str(modulusNim))

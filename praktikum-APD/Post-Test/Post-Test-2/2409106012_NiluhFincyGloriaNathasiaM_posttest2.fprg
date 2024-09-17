@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="postTest2"/>
+        <attribute name="authors" value="ACER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-16 07:53:44 PM"/>
+        <attribute name="created" value="QUNFUjtMQVBUT1AtMTFONVYzSzQ7MjAyNC0wOS0xNjswNToyNjozOCBQTTsyNTc3"/>
+        <attribute name="edited" value="QUNFUjtMQVBUT1AtMTFONVYzSzQ7MjAyNC0wOS0xNjswNzo1Mzo0NCBQTTsxOzI2ODQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NamaLengkap, NamaPanggilan, Prodi, Agama, AsalSekolah" type="String" array="False" size=""/>
+            <declare name="Umur, Nim, TahunAjaran, TinggiBadan" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Nama Lengkap&quot;" newline="True"/>
+            <input variable="NamaLengkap"/>
+            <output expression="&quot;Masukkan Nama Panggilan&quot;" newline="True"/>
+            <input variable="NamaPanggilan"/>
+            <output expression="&quot;Masukkan Nim&quot;" newline="True"/>
+            <input variable="Nim"/>
+            <output expression="&quot;Masukkan Prodi&quot;" newline="True"/>
+            <input variable="Prodi"/>
+            <output expression="&quot;Masukkan Tahun Ajaran Masuk&quot;" newline="True"/>
+            <input variable="TahunAjaran"/>
+            <output expression="&quot;Masukkan Umur&quot;" newline="True"/>
+            <input variable="Umur"/>
+            <output expression="&quot;Masukkan Tinggi Bandan anda&quot;" newline="True"/>
+            <input variable="TinggiBadan"/>
+            <output expression="&quot;Masukkan Agama Anda&quot;" newline="True"/>
+            <input variable="Agama"/>
+            <output expression="&quot;Asal Sekolah&quot;" newline="True"/>
+            <input variable="AsalSekolah"/>
+            <output expression="&quot;Nama saya adalah &quot; &amp; NamaLengkap &amp; &quot;, biasa dipanggil &quot; &amp; NamaPanggilan &amp; &quot;, Dengan NIM &quot; &amp; Nim &amp; &quot;,  Saya dari angkatan &quot; &amp; TahunAjaran &amp;  &quot;, Sekarang Saya berumur  &quot; &amp; Umur &amp; &quot;, Tinggi Badan saya adalah &quot; &amp; TinggiBadan &amp; &quot;. Agama saya adalah &quot; &amp; Agama &amp; &quot;, Asal sekolah saya dari &quot; &amp; AsalSekolah &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
