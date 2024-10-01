@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="posttes4"/>
+        <attribute name="authors" value="ACER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 12:23:45 PM"/>
+        <attribute name="created" value="QUNFUjtMQVBUT1AtMTFONVYzSzQ7MjAyNC0wOS0zMDsxMDowMToyMiBBTTsyNTQw"/>
+        <attribute name="edited" value="QUNFUjtMQVBUT1AtMTFONVYzSzQ7MjAyNC0xMC0wMTsxMjoyMzo0NSBQTTs5OzI2NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="username, lanjut, ya" type="String" array="False" size=""/>
+            <declare name="beratbadan, tinggibadan, TDEE, BMR, login, umur, poin, levelaktivitasharian" type="Integer" array="False" size=""/>
+            <declare name="password, jeniskelamin, pilihlevelaktivitas" type="String" array="False" size=""/>
+            <assign variable="login" expression="0"/>
+            <while expression="login &lt; 3">
+                <output expression="&quot;Masukkan username : &quot;" newline="True"/>
+                <input variable="username"/>
+                <output expression="&quot;Masukkan password : &quot;" newline="True"/>
+                <input variable="password"/>
+                <if expression="username == &quot;NILUH&quot; and password == &quot;12&quot;">
+                    <then>
+                        <output expression="&quot;Login Berhasil&quot;" newline="True"/>
+                        <output expression="&quot;Pillih jenis kelamin &quot;" newline="True"/>
+                        <output expression="&quot;a.pria b.wanita&quot;" newline="True"/>
+                        <output expression="&quot;pilihan a/b&quot;" newline="True"/>
+                        <input variable="jeniskelamin"/>
+                        <if expression="jeniskelamin == &quot;a&quot;">
+                            <then>
+                                <output expression="&quot;Masukkan Tinggi Badan(cm)&quot;" newline="True"/>
+                                <input variable="tinggibadan"/>
+                                <output expression="&quot;Masukkan Berat badan(kg)&quot;" newline="True"/>
+                                <input variable="beratbadan"/>
+                                <output expression="&quot;Masukkan umur&quot;" newline="True"/>
+                                <input variable="umur"/>
+                                <output expression="&quot;pilih level aktifitas harian&quot;" newline="True"/>
+                                <output expression="&quot;1. aktivits minimal (jarang bergerak)&quot;" newline="True"/>
+                                <output expression="&quot;2. aktivitas sedang (olahraga 1-3 kali seminggu)&quot;" newline="True"/>
+                                <output expression="&quot;3. aktivitas tinggi (olahraga 4-7 kali seminggu)&quot;" newline="True"/>
+                                <input variable="levelaktivitasharian"/>
+                                <assign variable="BMR" expression="(10*(BeratBadan))+ (6.25*(TinggiBadan))+ (5*Umur)+5"/>
+                                <if expression="levelaktivitasharian == 1">
+                                    <then>
+                                        <assign variable="poin" expression="1.25"/>
+                                        <assign variable="TDEE" expression="BMR*Poin"/>
+                                        <output expression="&quot;kebutuhan harian anda adalah &quot; &amp; TDEE" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="levelaktivitasharian == 2">
+                                            <then>
+                                                <assign variable="poin" expression="1.36"/>
+                                                <assign variable="TDEE" expression="BMR*Poin"/>
+                                                <output expression="&quot;kebutuhan harian anda adalah &quot; &amp; TDEE" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="levelaktivitasharian == 3">
+                                                    <then>
+                                                        <assign variable="poin" expression="1.72"/>
+                                                        <assign variable="TDEE" expression="BMR*Poin"/>
+                                                        <output expression="&quot;kebutuhan harian anda adalah  &quot; &amp; TDEE" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="jeniskelamin == &quot;b&quot;">
+                                    <then>
+                                        <output expression="&quot;Masukkan Tinggi Badan(cm)&quot;" newline="True"/>
+                                        <input variable="tinggibadan"/>
+                                        <output expression="&quot;Masukkan Berat badan(kg)&quot;" newline="True"/>
+                                        <input variable="beratbadan"/>
+                                        <output expression="&quot;Masukkan umur&quot;" newline="True"/>
+                                        <input variable="umur"/>
+                                        <output expression="&quot;pilih level aktivitas harian&quot;" newline="True"/>
+                                        <output expression="&quot;1. Level aktivitas minimal (Jarang bergerak)&quot;" newline="True"/>
+                                        <output expression="&quot;2. level aktivitas sedang (1-3 kali seminggu)&quot;" newline="True"/>
+                                        <output expression="&quot;3. pilih level aktivitas tinggi (4-7 kali seminggu)&quot;" newline="True"/>
+                                        <input variable="levelaktivitasharian"/>
+                                        <assign variable="BMR" expression="(10*(BeratBadan))+ (6.25*(TinggiBadan))+ (5*Umur)-161"/>
+                                        <if expression="levelaktivitasharian == 1">
+                                            <then>
+                                                <assign variable="poin" expression="1.25"/>
+                                                <assign variable="TDEE" expression="BMR*Poin"/>
+                                                <output expression="&quot;kebutuhan harian anda adalah &quot; &amp; TDEE" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="levelaktivitasharian == 2">
+                                                    <then>
+                                                        <assign variable="poin" expression="1.36"/>
+                                                        <assign variable="TDEE" expression="BMR*Poin"/>
+                                                        <output expression="&quot;kebutuhan harian anda adalah &quot; &amp; TDEE" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="levelaktivitasharian == 3">
+                                                            <then>
+                                                                <assign variable="poin" expression="1.72"/>
+                                                                <assign variable="TDEE" expression="BMR*Poin"/>
+                                                                <output expression="&quot;kebutuhan harian anda adalah &quot; &amp; TDEE" newline="True"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                        <output expression="&quot;lanjut atau tidak&quot;" newline="True"/>
+                        <input variable="lanjut"/>
+                        <if expression="lanjut == &quot;tidak&quot;">
+                            <then>
+                                <output expression="&quot;program selesai&quot;" newline="True"/>
+                                <assign variable="login" expression="3"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="login" expression="login+1"/>
+                        <output expression="&quot;login invalid&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
